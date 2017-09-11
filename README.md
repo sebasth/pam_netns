@@ -4,7 +4,7 @@
 
 Simple demonstration applying pre-configured network namespaces to user session using Pluggable Authentication Modules.
 
-### Awesome/awful, should I use it
+## Awesome/awful, should I use it?
 
 Probably not.
 
