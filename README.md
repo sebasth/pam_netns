@@ -26,8 +26,8 @@ Configure a network namespace using `ip netns`:
 Place configuration in `/etc/security/pam_netns.conf`. Configuration file contains one username and network namespace name per line. To map user *test* to *ns0*:
 
     test ns0
-
-Enable for session, for debian based distributions add to the end of `/etc/pam.d/common-session`:
+    
+Configure PAM to use this module when creating a session. For debian based distributions add to the end of `/etc/pam.d/common-session`:
 
     optional pam_python.so /etc/secirity/pam_python/pam_netns.py
 
