@@ -10,13 +10,17 @@ Probably not.
 
 ## Requirements
 
-- Python: yum install python26 python26-devel python26-sphinx
+- Python: 
+
+    yum install python26 python26-devel python26-sphinx
 
 - `pam_python`, a PAM-to-Python adapter, enabling one to run Python scripts as PAM modules.
-Source here:
-https://sourceforge.net/projects/pam-python/
-A patch to make it build on CentOS, here:
-https://sourceforge.net/p/pam-python/tickets/4/attachment/pam-python-1.0.7.from-1.0.6.patch
+
+Source here: https://sourceforge.net/projects/pam-python/
+
+A patch to make it build on CentOS, here: https://sourceforge.net/p/pam-python/tickets/4/attachment/pam-python-1.0.7.from-1.0.6.patch
+
+
 
 ## Example
 
