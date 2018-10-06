@@ -84,7 +84,7 @@ def pam_sm_close_session(pamh, flags, argv):
 #
 # NETNS
 #
-NET_PATH = "/run/netns"
+NET_PATH = "/var/run/netns"
 
 # http://elixir.free-electrons.com/linux/v4.13/source/include/uapi/linux/sched.h#L29
 CLONE_NEWNET = 0x40000000
@@ -98,14 +98,14 @@ def netns_switch_by_path(path):
         f = open(path, "r")
         
     except Exception as e:
-        critical("cannot open network namespace in \"%s\": %s" % (name, str(e)))
+        critical("cannot open network namespace in \"%s\": %s" % (path, str(e)))
         return -1
 
     try:
         fd = f.fileno()
         err = libc.setns(fd, CLONE_NEWNET)
         if err < 0:
-            critical("setting the network namespace \"%s\" failed: %s" % (name ,err))
+            critical("setting the network namespace \"%s\" failed: %s" % (path ,err))
             return -1
 
         # should unshare mount namespace?
