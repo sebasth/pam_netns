@@ -33,13 +33,14 @@ Configure a network namespace using `ip netns`:
 
  *NOTE:* By default namespaces configured with `ip netns` are not preserved across reboots. You need to write your own script to restore them on boot.
 
-Place configuration in `/etc/security/pam_netns.conf`. Configuration file contains one username and network namespace name per line. To map user *test* to *ns0*:
+Place configuration in `/etc/security/pam_netns.conf`. Configuration file contains one username and network namespace name per line. Do not use hash comments. To map user *test* to *ns0*:
 
     test ns0
     
-Configure PAM to use this module when creating a session. For debian based distributions add to the end of `/etc/pam.d/common-session`:
+Configure PAM to use this module when creating a session. 
+For CentOSn based distributions add to the end of `/etc/pam.d/sshd`:
 
-    optional pam_python.so /etc/secirity/pam_python/pam_netns.py
+    session optional pam_python.so /etc/secirity/pam_python/pam_netns.py
 
 Possible options:
    
