@@ -59,3 +59,8 @@ Possible options:
 ## Bugs
 
 When using `sudo`, `su` etc., the network namespace is not changd back to default (pid 1) one.
+
+## Further reading
+
+https://blogs.igalia.com/dpino/2016/04/10/network-namespaces/
+
