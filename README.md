@@ -38,7 +38,7 @@ Place configuration in `/etc/security/pam_netns.conf`. Configuration file contai
     test ns0
     
 Configure PAM to use this module when creating a session. 
-For CentOSn based distributions add to the end of `/etc/pam.d/sshd`:
+For CentOS based distributions add to the end of `/etc/pam.d/sshd`:
 
     session optional pam_python.so /etc/secirity/pam_python/pam_netns.py
 
