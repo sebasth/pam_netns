@@ -4,6 +4,14 @@
 
 Simple demonstration applying pre-configured network namespaces to user session using Pluggable Authentication Modules.
 
+## what is your use case?
+
+You can have multiple linux users on one server to each use/see only their own designated network.
+Without this, all linux users share same, default network configuration.
+With this, users can also be isolated according to IP and network rules, in addition to user/group permissions.
+Linux has Network Namespaces which enable administrators to create multiple independent networks and then run processes bound to those networks. With this script, users can be bound to those networks.
+
+
 ## Awesome/awful, should I use it?
 
 Probably not.
